@@ -1,7 +1,6 @@
 import React from 'react';
 
-export default function NavBar({ flash }) {
-  console.log(flash);
+export default function NavBar() {
   const loginHandler = (e) => {
     e.preventDefault();
     fetch('/api/login', {

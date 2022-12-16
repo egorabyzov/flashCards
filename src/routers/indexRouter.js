@@ -1,10 +1,12 @@
 import express from 'express';
+import { Them } from '../../db/models';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  const initState = { };
+router.get('/', async (req, res) => {
+  const ques = await Them.findAll();
+  const initState = { ques };
   res.render('Layout', initState);
 });
-export default router;
 
+export default router;
