@@ -1,7 +1,14 @@
 import express from 'express';
-import { User } from '../../db/models';
+import { Question, User } from '../../db/models';
 
 const router = express.Router();
+
+// router.get('/theme/:id', async (req, res) => {
+//   const { id } = req.params;
+//   const questions = await Question.findAll({ where: { themId: `${id}` } });
+//   console.log(questions)
+//   res.render('Layout', { questions });
+// });
 
 router.post('/login', async (req, res) => {
   await User.create(req.body);
