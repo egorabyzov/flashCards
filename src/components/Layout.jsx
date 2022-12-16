@@ -21,7 +21,7 @@ export default function Layout({ initState }) {
         <title>Document</title>
       </head>
 
-      <body>
+      <body className="container">
         <div id="root">
           <StaticRouter location={initState.url}>
             <App {...initState} />

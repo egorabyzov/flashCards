@@ -7,12 +7,12 @@ import OneCard from './OneCard';
 
 export default function App({ questions }) {
   return (
-    <div className="container">
+    <>
       <NavBar />
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/api/theme:id" element={<OneCard />} />
       </Routes>
-    </div>
+    </>
   );
 }
