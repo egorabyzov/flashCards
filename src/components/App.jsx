@@ -7,6 +7,7 @@ import AllCards from './AllCards';
 export default function App({ questions, ques }) {
   return (
     <>
+
       <NavBar />
       <Routes>
         <Route path="/" element={<MainPage ques={ques} />} />
