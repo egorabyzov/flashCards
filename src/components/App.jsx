@@ -4,7 +4,6 @@ import MainPage from './MainPage';
 import NavBar from './NavBar';
 import OneCard from './OneCard';
 
-
 export default function App({ questions }) {
   return (
     <>
