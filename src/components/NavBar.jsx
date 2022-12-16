@@ -20,7 +20,7 @@ export default function NavBar() {
           padding: '10px', marginTop: '20px', borderRadius: '10px', backgroundColor: 'blue',
         }}
       >
-        <a className="navbar-brand">FlashCards</a>
+        <a className="navbar-brand" href="/">FlashCards</a>
         <form onSubmit={loginHandler} className="form-inline" style={{ display: 'flex' }}>
           <input name="name" className="form-control mr-sm-2" type="search" placeholder="Login" aria-label="Search" />
           <button type="submit" className="btn btn-info">Submit</button>
