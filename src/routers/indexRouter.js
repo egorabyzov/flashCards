@@ -1,12 +1,15 @@
 import express from 'express';
 import { Question } from '../../db/models';
+import { Them } from '../../db/models';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  const initState = { };
+router.get('/', async (req, res) => {
+  const ques = await Them.findAll();
+  const initState = { ques };
   res.render('Layout', initState);
 });
+
 
 router.get('/theme/:id', async (req, res) => {
   const { id } = req.params;
@@ -16,4 +19,3 @@ router.get('/theme/:id', async (req, res) => {
 });
 
 export default router;
-
