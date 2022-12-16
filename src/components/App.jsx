@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import MainPage from './MainPage';
 import NavBar from './NavBar';
-import OneCard from './OneCard';
+import AllCards from './AllCards';
 
 export default function App({ questions }) {
   return (
@@ -10,7 +10,7 @@ export default function App({ questions }) {
       <NavBar />
       <Routes>
         <Route path="/" element={<MainPage />} />
-        <Route path="/api/theme:id" element={<OneCard />} />
+        <Route path="/theme/:id" element={<AllCards questions={questions} />} />
       </Routes>
     </>
   );
