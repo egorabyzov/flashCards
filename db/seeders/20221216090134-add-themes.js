@@ -1,31 +1,29 @@
-'use strict';
-
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up (queryInterface, Sequelize) {
+  async up(queryInterface, Sequelize) {
     await queryInterface.bulkInsert('Thems', [{
-      them: "Cinema",
+      them: 'Cinema',
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      them: "Animals",
+      them: 'Animals',
       createdAt: new Date(),
       updatedAt: new Date(),
     },
     {
-      them: "Geography",
+      them: 'Geography',
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});
   },
 
-  async down (queryInterface, Sequelize) {
+  async down(queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-  }
+  },
 };
