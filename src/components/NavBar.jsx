@@ -25,9 +25,7 @@ export default function NavBar({ flash }) {
         }}
       >
         <a className="navbar-brand">FlashCards</a>
-        <a className="navbar-brand">
-          {inputValue.name}
-        </a>
+        {inputValue && (<a className="navbar-brand">Добро пожаловать,{inputValue.name}! </a>)}
         <form onSubmit={loginHandler} className="form-inline" style={{ display: 'flex' }}>
           <input name="name" className="form-control mr-sm-2" type="search" placeholder="Login" aria-label="Search" />
           <button type="submit" className="btn btn-info">Submit</button>
