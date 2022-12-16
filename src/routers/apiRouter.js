@@ -4,8 +4,8 @@ import { User } from '../../db/models';
 const router = express.Router();
 
 router.post('/login', async (req, res) => {
-  await User.create(req.body);
-  res.sendStatus(200);
+  const user = await User.create(req.body);
+  res.json(user);
 });
 
 export default router;
