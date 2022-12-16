@@ -1,6 +1,5 @@
 import express from 'express';
-import { Question } from '../../db/models';
-import { Them } from '../../db/models';
+import { Question, Them } from '../../db/models';
 
 const router = express.Router();
 
@@ -10,11 +9,10 @@ router.get('/', async (req, res) => {
   res.render('Layout', initState);
 });
 
-
 router.get('/theme/:id', async (req, res) => {
   const { id } = req.params;
   const questions = await Question.findAll({ where: { themId: id } });
-  console.log(questions)
+  console.log(questions);
   res.render('Layout', { questions });
 });
 
